@@ -1,0 +1,44 @@
+globalConfig:
+  author: weiller
+  open: false
+  idType: INPUT
+  dateType: ONLY_DATE
+  enableCache: false
+  activeRecord: false
+  baseResultMap: true
+  baseColumnList: true
+  swagger2: false
+  fileOverride: true
+dataSourceConfig:
+  url: jdbc:mysql://localhost:3306/demo?useUnicode=true&useSSL=false&characterEncoding=utf8
+  driverName: com.mysql.jdbc.Driver
+  username: root
+  password: xiweile
+packageConfig:
+  parent: com.weiller.product
+  moduleName: rest
+  entity: model
+  service: service
+  serviceImpl: service.impl
+  mapper: dao
+  xml: mapper
+  controller: controller
+  pathInfo:
+    entity_path: .\springcloud-product\src\main\java\com\weiller\product\rest\model
+    service_path: .\springcloud-product\src\main\java\com\weiller\product\rest\service
+    service_impl_path: .\springcloud-product\src\main\java\com\weiller\product\rest\service\impl
+    mapper_path: .\springcloud-product\src\main\java\com\weiller\product\rest\dao
+    xml_path: .\springcloud-product\src\main\resources\com\weiller\product\rest\mapper
+    controller_path: .\springcloud-product\src\main\java\com\weiller\product\rest\controller
+strategyConfig:
+  naming: underline_to_camel
+  columnNaming: underline_to_camel
+  entityLombokModel: true
+  superMapperClass: com.baomidou.mybatisplus.core.mapper.BaseMapper
+  superServiceClass: com.baomidou.mybatisplus.extension.service.IService
+  superServiceImplClass: com.baomidou.mybatisplus.extension.service.impl.ServiceImpl
+  controllerMappingHyphenStyle: true
+  restControllerStyle: true
+  tablePrefix:
+  include:
+    - dj_nsrxx
