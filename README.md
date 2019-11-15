@@ -82,6 +82,8 @@ strategyConfig:
 mvn mybatis-plus-generator:generator
 ```
 如果是使用InterlliJ IDEA工具，使用更加方便，步骤如下图：
+
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20191115153431762.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpd2VpbGxlcg==,size_16,color_FFFFFF,t_70)
 生成结果如下：
+
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20191115152720828.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpd2VpbGxlcg==,size_16,color_FFFFFF,t_70)
