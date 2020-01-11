@@ -1,6 +1,9 @@
 # mybatis-plus代码生成maven插件
 > 为了在项目中快捷方便的代码生成，将mybatis-plus-generator封装为了一个maven的插件`mybatis-plus-generator-maven-plugin`，在要使用的项目pom文件引入该插件，执行mvn命令，即可直接生成代码到项目中，生成基于`mybatis-plus`的mapper、service、controller三层结构，包括entity实体类和mapper.xml文件，生成后直接能够满足基本的条件查询和分页查询。下面介绍该插件的使用步骤：
-
+``` 
+更新记录:
+2020-01-11 完善对使用oracle数据源找不到驱动的问题
+```
 ## 一、下载插件
  将源代码导入需要生成代码的项目工程中，执行`mvn intall` 
 
@@ -21,6 +24,14 @@
 				<configuration>
 					<configurationFile>${basedir}/src/main/resources/generator/mp-code-generator-config.yaml</configurationFile>
 				</configuration>
+                <dependencies>
+                    <!-- 如果是oracle库，需要额外引入jdbc驱动包，mysql则可忽略 -->
+					<dependency>
+						<groupId>com.oracle</groupId>
+						<artifactId>ojdbc6</artifactId>
+						<version>${ojdbc.version}</version>
+					</dependency>
+				</dependencies>
 			</plugin>
 			<!-- mybatis-plus generator 自动生成代码插件 -->
 		</plugins>
@@ -87,3 +98,4 @@ mvn mybatis-plus-generator:generator
 生成结果如下：
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20191115152720828.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpd2VpbGxlcg==,size_16,color_FFFFFF,t_70)
+
