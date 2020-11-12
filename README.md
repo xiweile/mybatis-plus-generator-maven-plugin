@@ -24,8 +24,8 @@
 				<configuration>
 					<configurationFile>${basedir}/src/main/resources/generator/mp-code-generator-config.yaml</configurationFile>
 				</configuration>
-                <dependencies>
-                    <!-- 如果是oracle库，需要额外引入jdbc驱动包，mysql则可忽略 -->
+                                <dependencies>
+                                        <!-- 如果是oracle库，需要额外引入jdbc驱动包，mysql则可忽略 -->
 					<dependency>
 						<groupId>com.oracle</groupId>
 						<artifactId>ojdbc6</artifactId>
